@@ -188,6 +188,7 @@ parser.add_argument("--profile-steps-all", action="store_true", help="Set steps 
 parser.add_argument("--profiler-steps", default=8, type=int, help="set number of steps to profile in PyTorch profiler, eg: 10")
 parser.add_argument("--include-profiler-stack", action="store_true", help="include stack trace in PyTorch profiler logs")
 parser.add_argument("--shuffle", action="store_true", help="If passed then batches will be shuffled.")
+parser.add_argument("--gpu-idle-times", type=str, help="file to write idle times of GPU")
 
 best_acc1 = 0
 
@@ -412,7 +413,7 @@ def main_worker(gpu, ngpus_per_node, args):
     train_loader = torch.utils.data.DataLoader(
         train_dataset,
         batch_size=args.batch_size,
-        shuffle=(train_sampler is None) and args.shuffle,
+        shuffle=False,
         num_workers=args.workers,
         pin_memory=True,
         sampler=train_sampler,
@@ -489,27 +490,43 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
         else:
             profiler_steps = args.profiler_steps
         train_p = profile(
-            activities=[ProfilerActivity.CPU,],
+            # Should Do
+            # Profile Only GPU
+            # Understand profiler overhead
+            # Torch CUDA Event
+            activities=[ProfilerActivity.CPU,ProfilerActivity.CUDA],
             with_stack=args.include_profiler_stack,
-            schedule=torch.profiler.schedule(wait=0, warmup=0, active=profiler_steps+1),
+            # schedule=torch.profiler.schedule(wait=5, warmup=1, active=args.profiler_steps+1, repeat=3),
+            # Wait - Do nothing for <> steps
+            # Warmup - Start profiling but don't record for <> steps
+            # Active - Start profiling and record for <> steps
+            # Repeat - Repeat <> number of times
+            schedule=torch.profiler.schedule(wait=3, warmup=3, active=5, repeat=3),
             on_trace_ready=torch.profiler.tensorboard_trace_handler(
                 f"{args.profile_log_prefix}"
             ),
         )
         train_p.start()
 
+    cuda_events = {}
+
     for i, (images, target) in enumerate(train_loader):
 
         # measure data loading time
         data_time.update(time.time() - end)
 
+        start_cuda = torch.cuda.Event(enable_timing=True)
+        end_cuda = torch.cuda.Event(enable_timing=True)
+
+        start_cuda.record()
+
         # move data to the same device as model
-        with record_function("move_data_to_device"):
+        with record_function("move_data_to_device_batch_" + str(i) + "_epoch" + str(epoch) + "_train"):
             images = images.to(device, non_blocking=True)
             target = target.to(device, non_blocking=True)
 
         # compute output
-        with record_function("model_forward_pass"):
+        with record_function("model_forward_pass_batch_" + str(i) + "_epoch" + str(epoch) + "_train"):
             output = model(images)
             loss = criterion(output, target)
 
@@ -520,15 +537,24 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
 
         # measure accuracy and record loss
         acc1, acc5 = accuracy(output, target, topk=(1, 5))
-        losses.update(loss.item(), images.size(0))
+        losses.update(loss_cpu, images.size(0))
+        # losses.update(loss.item(), images.size(0))
         top1.update(acc1[0], images.size(0))
         top5.update(acc5[0], images.size(0))
 
         # compute gradient and do SGD step
-        losses.update(loss_cpu, images.size(0))
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+        # losses.update(loss_cpu, images.size(0))
+        # optimizer.zero_grad()
+        # loss.backward()
+        # optimizer.step()
+        with record_function("model_backward_pass_batch_" + str(i) + "_epoch" + str(epoch) + "_train"):
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+        end_cuda.record()
+
+        cuda_events[i] = (start_cuda, end_cuda)
 
         if args.profile:
             train_p.step()
@@ -550,7 +576,17 @@ def train(train_loader, model, criterion, optimizer, epoch, device, args):
                 break
 
     if args.profile:
+        print("EXITING??")
         train_p.stop()
+    
+    for i in range(1, len(cuda_events)):
+        start, end = cuda_events[i]
+        start_prev, end_prev = cuda_events[i - 1]
+        torch.cuda.synchronize()
+        # print(f"Batch {i} took {start.elapsed_time(end)}ms")
+        # open(args.gpu_idle_times,'w').write(f"{start_cuda.elapsed_time(end_cuda)} ms")
+        # write to args.gpu_idle_time the time between end_prev and start for each i
+        open(args.gpu_idle_times,'a').write(f"{end_prev.elapsed_time(start)} ms\n")
 
 
 def validate(val_loader, model, criterion, args):

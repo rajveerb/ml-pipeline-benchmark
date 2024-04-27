@@ -9,10 +9,10 @@ time_binary="/bin/time"
 dataset_dir="${home_dir_}/scratch/datasets/imagenet"
 
 
-batch_sizes=("128" "256" "512" "1024")
-num_gpus=("1" "2" "3" "4")
-# batch_sizes=("128")
-# num_gpus=("2" "4")
+# batch_sizes=("128" "256" "512" "1024")
+# num_gpus=("1" "2" "3" "4")
+batch_sizes=("512")
+num_gpus=("2")
 num_epochs=1
 time_format="wall(s),user(s),kernel(s),max_rss(KB)\n%e,%U,%S,%M"
 e2e_log_dir="${result_dir_}/e2e"
@@ -51,6 +51,6 @@ do
         fi
 
         # TORCH_DATALOADER_PIN_CORE=1 as env variable to pin each data loader to a specific core 
-        ${time_binary} --format=${time_format} -o "${e2e_log_dir}/custom_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${result_dir}/custom_log --val-loop 0 --gpu-idle-times ${result_dir}/gpu_idle_times;
+        TORCH_DATALOADER_PIN_CORE=1 ${time_binary} --format=${time_format} -o "${e2e_log_dir}/custom_log_b${batch_size}_gpu${num_gpu}.log" ${python_path} ${program_path} ${dataset_dir} -b ${batch_size} --gpus ${num_gpu} -j ${num_gpu} --epochs ${num_epochs} --log-train-file ${result_dir}/custom_log --val-loop 0 --gpu-idle-times ${result_dir}/gpu_idle_times;
     done
 done
