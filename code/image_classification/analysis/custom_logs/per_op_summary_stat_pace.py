@@ -10,7 +10,7 @@ pd.set_option('display.width', 1000)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--data_dir", type=str,\
-                     default='/mydata/profiler_benchmark/custom_log_profiles_imagenet_subset_b512_gpu1',\
+                     default='/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results',\
                         help="path to the directory containing the log files")
 # for percentile
 parser.add_argument("--percentile", type=float, default=0.9,\

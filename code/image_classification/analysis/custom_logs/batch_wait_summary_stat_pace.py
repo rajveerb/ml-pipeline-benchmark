@@ -3,7 +3,7 @@ import os,pandas as pd, argparse, natsort
 
 parser = argparse.ArgumentParser(description='batch_wait_summary_stat')
 parser.add_argument('--data_dir', type=str,\
-                     default='/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/',\
+                     default='/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results',\
                           help='directory where custom_log files are stored')
 args = parser.parse_args()
 

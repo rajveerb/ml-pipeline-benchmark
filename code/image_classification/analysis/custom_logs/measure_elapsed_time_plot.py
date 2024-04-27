@@ -18,13 +18,13 @@ figsize = (50,25)
 # add argument to pass pytorch_profiler_data_file
 parser = argparse.ArgumentParser()
 parser.add_argument('--data_dir', type=str,
-                    default='/users/rajveerb/pytorch_custom_log_one_epoch_imagenet_dataset/', help='Root directory with custom_log for different configs')
+                    default='/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results', help='Root directory with custom_log for different configs')
 
 parser.add_argument('--sort_criteria', type=str,
                     default='batch_id', help='sort by `batch_id` or `duration`')
 
 parser.add_argument('--fig_dir', type=str,
-                    default='./figs',
+                    default='./figs_pace',
                     help='Path to store the figures')
                     
 
@@ -515,13 +515,13 @@ def plotter_diff_consumed_wait_end_per_batch_time(target_dir,sort_by='batch_id',
     plt.clf()
 
 # # %%
-# print("preprocessing time")
-# plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize)
-# print("----------------------------------------------\n")
+print("preprocessing time")
+plotter_preprocessing_time(args.data_dir,sort_by=args.sort_criteria,remove_outliers=True,fig_dir=args.fig_dir, fig_size=figsize)
+print("----------------------------------------------\n")
     
 # # %%
-# print("main process wait time")
-# plotter_preprocessing_wait_time(args.data_dir,fig_dir=args.fig_dir, fig_size=figsize)
+print("main process wait time")
+plotter_preprocessing_wait_time(args.data_dir,fig_dir=args.fig_dir, fig_size=figsize)
 print("----------------------------------------------\n")
 
 # %%
@@ -530,6 +530,6 @@ plotter_diff_consumed_preprocess_end_per_batch_time(args.data_dir,remove_outlier
 print("----------------------------------------------\n")
 
 # # %%
-# print("[imagenet] plotting difference between batch consumed and end of batch wait")
-# plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,remove_outliers=True, fig_dir=args.fig_dir, fig_size=figsize)
-# print("----------------------------------------------\n")
+print("[imagenet] plotting difference between batch consumed and end of batch wait")
+plotter_diff_consumed_wait_end_per_batch_time(args.data_dir,remove_outliers=True, fig_dir=args.fig_dir, fig_size=figsize)
+print("----------------------------------------------\n")

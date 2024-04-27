@@ -1,0 +1,658 @@
+All numbers are in ms
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu1
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.028022e+05  45.005828  44.428568       46.262606   6.552399
+SLoader                2.069394e+07  18.063021  15.782937       28.365967  14.851201
+SNormalize             2.755324e+05   0.240503   0.224922        0.267631   0.644868
+SRandomHorizontalFlip  9.015852e+04   0.078696   0.096068        0.111101   0.425913
+SRandomResizedCrop     1.705241e+06   1.488446   1.310671        1.964965   3.187363
+SToTensor              4.602588e+05   0.401744   0.371611        0.516630   0.421305
+STransform             3.316641e+06   2.894981   2.705718        3.422442   5.507206
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                26.577268
+SNormalize             99.999127
+SRandomHorizontalFlip  99.999040
+SRandomResizedCrop     99.656353
+SToTensor              99.999127
+STransform             99.504736
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.794786
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu2
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.524104e+05  45.195842  44.933173       47.016539   1.696693
+SLoader                2.065779e+07  16.124200  13.652879       26.548636  13.969870
+SNormalize             3.087289e+05   0.240975   0.226091        0.268459   0.104691
+SRandomHorizontalFlip  1.008736e+05   0.078736   0.096274        0.113101   0.306715
+SRandomResizedCrop     1.898130e+06   1.481563   1.307200        1.952502   1.577153
+SToTensor              5.310920e+05   0.414538   0.384078        0.535624   0.269266
+STransform             3.677413e+06   2.870362   2.692815        3.387078   2.018944
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                32.157478
+SNormalize             99.999532
+SRandomHorizontalFlip  99.999688
+SRandomResizedCrop     99.644153
+SToTensor              99.999766
+STransform             99.505061
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.543476
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu3
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.623858e+05  46.192389  46.145077       48.261669   2.831552
+SLoader                1.993549e+07  15.560413  13.207919       25.545650  14.287909
+SNormalize             3.126312e+05   0.244021   0.229100        0.273990   0.232031
+SRandomHorizontalFlip  1.013457e+05   0.079104   0.095868        0.114535   0.108714
+SRandomResizedCrop     1.893333e+06   1.477819   1.300831        1.947327   1.524829
+SToTensor              5.346912e+05   0.417347   0.386061        0.540089   0.218667
+STransform             3.611624e+06   2.819011   2.636102        3.330416   1.863302
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                32.811960
+SNormalize             99.999532
+SRandomHorizontalFlip  99.999532
+SRandomResizedCrop     99.637128
+SToTensor              99.999532
+STransform             99.495928
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.204956
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu4
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.634655e+05  46.300246  45.882498       48.494921   2.065486
+SLoader                1.823987e+07  14.236920  11.959162       23.558360  14.286424
+SNormalize             3.172462e+05   0.247623   0.236687        0.281662   0.218057
+SRandomHorizontalFlip  1.025616e+05   0.080053   0.083427        0.116171   0.341351
+SRandomResizedCrop     1.889818e+06   1.475076   1.294005        1.934322   2.667067
+SToTensor              5.433379e+05   0.424096   0.394657        0.543202   0.268230
+STransform             3.628822e+06   2.832434   2.648089        3.314119   3.386113
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.009990
+SLoader                39.634021
+SNormalize             99.999454
+SRandomHorizontalFlip  99.999688
+SRandomResizedCrop     99.642435
+SToTensor              99.999688
+STransform             99.505919
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.299713
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu1
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.285224e+05  87.686188  86.439292       92.108889   6.168986
+SLoader                2.058246e+07  16.449298  14.084530       26.712999  13.940189
+SNormalize             2.969354e+05   0.237308   0.221312        0.256404   0.356879
+SRandomHorizontalFlip  9.821211e+04   0.078490   0.096178        0.110744   0.334965
+SRandomResizedCrop     1.832470e+06   1.464492   1.287206        1.925127   2.409282
+SToTensor              5.186706e+05   0.414516   0.373197        0.552099   0.319238
+STransform             3.485291e+06   2.785410   2.603760        3.267157   3.270374
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                30.694328
+SNormalize             99.999281
+SRandomHorizontalFlip  99.999281
+SRandomResizedCrop     99.648356
+SToTensor              99.999201
+STransform             99.521765
+
+
+
+% of each operation with duration < 100 us
+                            dur
+name                           
+SCollation              0.00000
+SLoader                 0.00000
+SNormalize              0.00000
+SRandomHorizontalFlip  51.96293
+SRandomResizedCrop      0.00000
+SToTensor               0.00000
+STransform              0.00000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu2
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.374052e+05  87.393642  86.779455       89.996277   2.744215
+SLoader                2.019056e+07  15.759509  13.515491       25.450115  14.123079
+SNormalize             3.087397e+05   0.240983   0.224750        0.264632   0.090121
+SRandomHorizontalFlip  1.000722e+05   0.078110   0.096690        0.112570   0.052869
+SRandomResizedCrop     1.867415e+06   1.457589   1.282931        1.916030   1.418970
+SToTensor              5.396073e+05   0.421184   0.384972        0.553561   0.086485
+STransform             3.567314e+06   2.784426   2.610025        3.266237   1.545955
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                30.742909
+SNormalize             99.999688
+SRandomHorizontalFlip  99.999610
+SRandomResizedCrop     99.647041
+SToTensor              99.999844
+STransform             99.520359
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.235085
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu3
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.495891e+05  89.827996  89.391139       92.019278   4.063304
+SLoader                1.946979e+07  15.196921  12.909042       25.021834  13.947955
+SNormalize             3.120085e+05   0.243535   0.226684        0.269522   0.248881
+SRandomHorizontalFlip  1.006934e+05   0.078595   0.095048        0.114440   0.118946
+SRandomResizedCrop     1.871996e+06   1.461164   1.286747        1.924250   1.472046
+SToTensor              5.449991e+05   0.425393   0.388680        0.556567   0.326557
+STransform             3.581217e+06   2.795277   2.619673        3.282269   1.809010
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                33.988543
+SNormalize             99.999376
+SRandomHorizontalFlip  99.999298
+SRandomResizedCrop     99.648524
+SToTensor              99.999454
+STransform             99.516847
+
+
+
+% of each operation with duration < 100 us
+                            dur
+name                           
+SCollation              0.00000
+SLoader                 0.00000
+SNormalize              0.00000
+SRandomHorizontalFlip  51.66563
+SRandomResizedCrop      0.00000
+SToTensor               0.00000
+STransform              0.00000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu4
+Percentile: 0.9
+                                dur                                                 
+                                sum       mean     median percentile_func        std
+name                                                                                
+SCollation             4.504646e+05  90.002924  89.492893       93.003282   4.523238
+SLoader                1.922519e+07  15.005998  12.807214       24.078112  14.633760
+SNormalize             3.213344e+05   0.250814   0.236897        0.280899   0.743703
+SRandomHorizontalFlip  1.041506e+05   0.081294   0.096716        0.116627   0.510349
+SRandomResizedCrop     1.895342e+06   1.479387   1.295131        1.934415   3.327892
+SToTensor              5.564334e+05   0.434318   0.397267        0.564205   0.488359
+STransform             3.653628e+06   2.851797   2.662867        3.329770   4.934588
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                33.766324
+SNormalize             99.998673
+SRandomHorizontalFlip  99.998829
+SRandomResizedCrop     99.642513
+SToTensor              99.998985
+STransform             99.516300
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  50.674893
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu1
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.332448e+05  177.051394  173.935774      185.208194  11.783958
+SLoader                2.056408e+07   16.410449   14.083277       26.527096  13.880835
+SNormalize             3.020409e+05    0.241033    0.223594        0.263454   0.517709
+SRandomHorizontalFlip  9.876587e+04    0.078817    0.094828        0.112210   0.333457
+SRandomResizedCrop     1.832135e+06    1.462072    1.282513        1.919094   2.655755
+SToTensor              5.251528e+05    0.419080    0.376032        0.557657   0.302047
+STransform             3.505791e+06    2.797675    2.616210        3.274461   3.662554
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                29.827573
+SNormalize             99.999282
+SRandomHorizontalFlip  99.999202
+SRandomResizedCrop     99.653183
+SToTensor              99.999122
+STransform             99.521430
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  52.366474
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu2
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.453337e+05  177.919957  177.344083      181.514495   6.351467
+SLoader                2.026120e+07   15.814648   13.560568       25.573841  14.116146
+SNormalize             3.112706e+05    0.242959    0.226035        0.265609   0.277864
+SRandomHorizontalFlip  9.940619e+04    0.077590    0.093701        0.111548   0.085015
+SRandomResizedCrop     1.871613e+06    1.460866    1.285169        1.920760   1.290405
+SToTensor              5.447002e+05    0.425159    0.385359        0.558820   0.166709
+STransform             3.597853e+06    2.808263    2.632274        3.290721   1.490188
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                30.869668
+SNormalize             99.999844
+SRandomHorizontalFlip  99.999844
+SRandomResizedCrop     99.639313
+SToTensor              99.999844
+STransform             99.503812
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  52.094848
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu3
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.449480e+05  177.765898  176.457839      184.289304  10.563581
+SLoader                1.919742e+07   14.984319   12.857003       24.254557  13.826200
+SNormalize             3.139029e+05    0.245013    0.229430        0.275443   0.488887
+SRandomHorizontalFlip  1.017799e+05    0.079443    0.095642        0.113798   0.443642
+SRandomResizedCrop     1.890551e+06    1.475647    1.294629        1.932463   2.562284
+SToTensor              5.358839e+05    0.418278    0.388354        0.535280   0.456530
+STransform             3.608151e+06    2.816300    2.631414        3.295488   3.466498
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                33.502112
+SNormalize             99.998439
+SRandomHorizontalFlip  99.998595
+SRandomResizedCrop     99.640328
+SToTensor              99.998439
+STransform             99.521530
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.368947
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu4
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.530710e+05  181.011203  179.974389      187.182112   9.047389
+SLoader                1.801927e+07   14.064734   11.499087       23.468492  14.886758
+SNormalize             3.202686e+05    0.249982    0.234787        0.279539   0.500582
+SRandomHorizontalFlip  1.026734e+05    0.080141    0.085219        0.115809   0.422254
+SRandomResizedCrop     1.896750e+06    1.480486    1.300622        1.938938   2.577019
+SToTensor              5.603417e+05    0.437368    0.398664        0.570652   0.334340
+STransform             3.685305e+06    2.876522    2.692920        3.372131   3.746127
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                42.259752
+SNormalize             99.999063
+SRandomHorizontalFlip  99.999063
+SRandomResizedCrop     99.644777
+SToTensor              99.999063
+STransform             99.515598
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.479706
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu1
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.431113e+05  357.636219  355.113393      364.385983  16.843171
+SLoader                2.054879e+07   16.193196   13.878251       26.136205  13.883548
+SNormalize             3.052824e+05    0.240574    0.226118        0.277142   0.363029
+SRandomHorizontalFlip  9.959084e+04    0.078481    0.094370        0.111181   0.348542
+SRandomResizedCrop     1.872220e+06    1.475377    1.296341        1.939845   2.354190
+SToTensor              5.083703e+05    0.400614    0.378984        0.501059   0.297179
+STransform             3.538882e+06    2.788768    2.605795        3.266679   3.207477
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                29.875876
+SNormalize             99.999370
+SRandomHorizontalFlip  99.999291
+SRandomResizedCrop     99.642547
+SToTensor              99.999370
+STransform             99.519771
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  52.123403
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu2
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.484122e+05  358.156699  356.024883      372.583675  16.142576
+SLoader                2.046918e+07   15.976980   13.761077       25.696017  14.003088
+SNormalize             3.112293e+05    0.242926    0.225479        0.265478   0.265750
+SRandomHorizontalFlip  9.996314e+04    0.078025    0.094826        0.112196   0.276461
+SRandomResizedCrop     1.873146e+06    1.462063    1.283874        1.917942   1.874719
+SToTensor              5.478118e+05    0.427588    0.385029        0.564919   0.226943
+STransform             3.602287e+06    2.811723    2.633649        3.291359   2.493518
+
+
+
+% of each operation with duration < 10 ms
+                             dur
+name                            
+SCollation              0.000000
+SLoader                30.282547
+SNormalize             99.999688
+SRandomHorizontalFlip  99.999688
+SRandomResizedCrop     99.643138
+SToTensor              99.999688
+STransform             99.511149
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  52.563249
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu3
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.509682e+05  360.198282  359.691156      371.744101  13.247525
+SLoader                1.632957e+07   12.745853    9.588269       22.254845  13.249938
+SNormalize             3.108788e+05    0.242653    0.227684        0.289753   0.046875
+SRandomHorizontalFlip  1.026289e+05    0.080106    0.094215        0.118365   0.033261
+SRandomResizedCrop     1.902841e+06    1.485241    1.312732        1.949651   1.290244
+SToTensor              5.215894e+05    0.407121    0.388738        0.494464   0.062476
+STransform             3.636947e+06    2.838777    2.664287        3.345403   1.343247
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.000000
+SLoader                 52.193586
+SNormalize             100.000000
+SRandomHorizontalFlip  100.000000
+SRandomResizedCrop      99.632835
+SToTensor              100.000000
+STransform              99.511617
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.175296
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+
+/home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu4
+Percentile: 0.9
+                                dur                                                   
+                                sum        mean      median percentile_func        std
+name                                                                                  
+SCollation             4.623108e+05  369.257841  367.722727      381.027193  15.228893
+SLoader                1.823884e+07   14.236112   11.742294       23.681876  14.667451
+SNormalize             3.193929e+05    0.249298    0.235814        0.283767   0.066343
+SRandomHorizontalFlip  1.019187e+05    0.079551    0.094041        0.116166   0.041926
+SRandomResizedCrop     1.882815e+06    1.469609    1.293904        1.931708   1.272122
+SToTensor              5.586810e+05    0.436072    0.399667        0.571078   0.085062
+STransform             3.653910e+06    2.852017    2.669717        3.338924   1.844883
+
+
+
+% of each operation with duration < 10 ms
+                              dur
+name                             
+SCollation               0.000000
+SLoader                 40.901459
+SNormalize              99.999688
+SRandomHorizontalFlip   99.999688
+SRandomResizedCrop      99.641108
+SToTensor              100.000000
+STransform              99.496006
+
+
+
+% of each operation with duration < 100 us
+                             dur
+name                            
+SCollation              0.000000
+SLoader                 0.000000
+SNormalize              0.000000
+SRandomHorizontalFlip  51.106062
+SRandomResizedCrop      0.000000
+SToTensor               0.000000
+STransform              0.000000
+--------------------------------------------------
+
+

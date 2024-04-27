@@ -1,0 +1,176 @@
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+3
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+8947
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.0335195530726257
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+99.96648044692738
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1557
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+8453
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+15.554445554445554
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+84.44555444555445
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+4093
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+5917
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+40.88911088911089
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+59.11088911088911
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b128_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+5321
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+4689
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+53.15684315684316
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+46.84315684315684
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+4887
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.0
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+100.0
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+923
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+4082
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+18.441558441558442
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+81.55844155844156
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1737
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+3268
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+34.705294705294705
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+65.2947052947053
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b256_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+2222
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2783
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+44.395604395604394
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+55.604395604395606
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2447
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.0
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+100.0
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+316
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+2187
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+12.624850179784259
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+87.37514982021574
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1191
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1312
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+47.58290051937675
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+52.41709948062325
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b512_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+1454
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1049
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+58.09029165001998
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+41.90970834998002
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu1
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1239
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+0.0
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+100.0
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu2
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+151
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1101
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+12.060702875399361
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+87.93929712460063
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu3
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+195
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1057
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+15.575079872204473
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+84.42492012779552
+
+-------------------
+root:  /home/mayurpl/sem_2/special_problems/ml_profiling/pace_logs/results/b1024_gpu4
+number of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+238
+number of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+1014
+% of batches where end_preprocessed < start_wait i.e batch was ready to be consumed
+19.009584664536742
+% of batches where end_preprocessed > start_wait i.e batch was not ready to be consumed
+80.99041533546327
